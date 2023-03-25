@@ -1,3 +1,8 @@
+#include <iostream>
+#include <vector>
+
+//DOESNT WORK YET
+
 typedef std::vector<std::vector<double>> Matrix;
 
 std::vector<double> GAUSS_JORDAN_METHOD(Matrix A, std::vector<double> a)
