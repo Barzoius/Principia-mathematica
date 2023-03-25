@@ -31,7 +31,7 @@ std::vector<double> GAUSS_JORDAN_METHOD(Matrrix A, std::vector<double> a)
     double Pivot = Aa[i][j];
     for(int i = 0; i < n; i++)
     {
-      
+      Aa[i][j] /= Pivot;
     }        
   }
 }
