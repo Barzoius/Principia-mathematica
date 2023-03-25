@@ -28,10 +28,28 @@ std::vector<double> GAUSS_JORDAN_METHOD(Matrrix A, std::vector<double> a)
       }       
     }
     if(pivot != i) { swap(Aa[i], Aa[pivot]) }
-    double Pivot = Aa[i][j];
-    for(int i = 0; i < n; i++)
+    double Pivot = Aa[i][i];
+    for(int j = i; j < n; j++)
     {
       Aa[i][j] /= Pivot;
-    }        
+    }   
+    for(int j = 0; j < n; j++)
+    {
+      if(j != i)
+      {
+        double F = Aa[j][i];
+        for(int k = i; k <= n; k++)
+        {
+          Aa[j][k] -= F * Aa[i][k];
+        }  
+      }
+        
+    }
   }
+  std::vector<double> x(n);
+  for(int i = 0; i < n; i++)
+  {
+    x[i] = Aa[i][n];
+  }
+  return x;           
 }
