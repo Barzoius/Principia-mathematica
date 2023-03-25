@@ -24,8 +24,14 @@ std::vector<double> GAUSS_JORDAN_METHOD(Matrrix A, std::vector<double> a)
     {
       if(abs(Aa[j][i] > abs(Aa[pivot][i])
       {
-        
+        pivot = j;
       }       
     }
+    if(pivot != i) { swap(Aa[i], Aa[pivot]) }
+    double Pivot = Aa[i][j];
+    for(int i = 0; i < n; i++)
+    {
+      
+    }        
   }
 }
