@@ -10,6 +10,7 @@ std::vector<double> GAUSS_JORDAN_METHOD(Matrix A, std::vector<double> a)
     int n = a.size();
     Matrix Aa(n, std::vector<double>(n + 1));
 
+    //Creates the AGUMENT MATRIX
     for(int i = 0; i < n; i++)
     {
         for(int j = 0; j < n; j++)
@@ -19,6 +20,7 @@ std::vector<double> GAUSS_JORDAN_METHOD(Matrix A, std::vector<double> a)
         Aa[i][n] = a[i];
     }
 
+    //From here we will perform the 3 possible row operations
     for(int i = 0; i < n; i++)
     {
         int pivot = i;
