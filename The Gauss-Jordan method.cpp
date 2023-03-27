@@ -44,6 +44,9 @@ std::vector<double> GAUSS_JORDAN_METHOD(Matrix A, std::vector<double> a)
         {
             Aa[i][j] /= Pivot;
         }
+        
+        //(3)ROW ADDITION
+        //This will eliminate the numbers under the pivot
         for(int j = 0; j < n; j++)
         {
             if(j != i)
