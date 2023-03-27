@@ -37,6 +37,8 @@ std::vector<double> GAUSS_JORDAN_METHOD(Matrix A, std::vector<double> a)
         if(pivot != i) { swap(Aa[i], Aa[pivot]); }
         
         //(2)ROW SCALE
+        //We want the pivot element to be equal to 1
+        //We do this by dividing the pivot with itself
         double Pivot = Aa[i][i];
         for(int j = i; j <= n; j++)
         {
