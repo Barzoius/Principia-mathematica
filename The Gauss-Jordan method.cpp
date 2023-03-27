@@ -23,6 +23,8 @@ std::vector<double> GAUSS_JORDAN_METHOD(Matrix A, std::vector<double> a)
     //From here we will perform the 3 possible row operations
     for(int i = 0; i < n; i++)
     {
+        //(1) PARTIAL PIVOTING
+        //Find the pivot
         int pivot = i;
         for(int j = i + 1; j < n; j++)
         {
@@ -31,7 +33,10 @@ std::vector<double> GAUSS_JORDAN_METHOD(Matrix A, std::vector<double> a)
                 pivot = j;
             }
         }
+        //This swaps the pivot row with the current row
         if(pivot != i) { swap(Aa[i], Aa[pivot]); }
+        
+        //(2)ROW SCALE
         double Pivot = Aa[i][i];
         for(int j = i; j <= n; j++)
         {
