@@ -6,7 +6,7 @@
 //Is to note that each operation is standardized 
 //in order to ensure a correct final solution
 //While this algorithm may not perform the 
-//minimum number of steps it will still arrive 
+//minimum possible number of steps it will still arrive 
 //at the reduced echelon form 
 
 typedef std::vector<std::vector<double>> Matrix;
