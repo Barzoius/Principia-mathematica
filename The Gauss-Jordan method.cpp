@@ -7,7 +7,7 @@
 //in order to ensure a correct final solution
 //While this algorithm may not perform the 
 //minimum possible number of steps it will still arrive 
-//at the reduced echelon form 
+//at the reduced echelon form(REF) 
 
 typedef std::vector<std::vector<double>> Matrix;
 
